@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | RedStore</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" type="image/x-icon" href="logo.png" />
+
+    <style>
+        /* --- VIP ABOUT PAGE CSS --- */
+        .about-header {
+            background: radial-gradient(#fff, #ffd6d6);
+            padding-bottom: 30px;
+        }
+        
+        /* Banner Area */
+        .about-banner {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .about-banner h1 {
+            font-size: 50px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .about-banner p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Core Story Section */
+        .about-core {
+            padding: 60px 0;
+        }
+        .about-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .about-col-img, .about-col-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .tagline {
+            color: #ff523b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .about-heading {
+            font-size: 38px;
+            line-height: 48px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .about-desc {
+            color: #555;
+            font-size: 15px;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Milestones Counters */
+        .milestones {
+            background: #ff523b;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 40px auto;
+        }
+        .milestone-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .milestone-box h2 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .milestone-box p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .team-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .team-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .team-col {
+            flex-basis: 30%;
+            min-width: 250px;
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .team-col:hover {
+            transform: translateY(-10px);
+        }
+        .team-col img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        .team-col h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        .team-col p {
+            color: #ff523b;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* Dark mode menu image icon white color fix */
+        .menu-icon.active {
+            filter: invert(1) brightness(2) !important;
+        }
+
+        /* --- Dark Mode Active Override Configurations --- */
+        body.active, body.active .about-header {
+            background: #222 !important;
+        }
+        body.active .about-banner h1, 
+        body.active .about-heading, 
+        body.active .team-title,
+        body.active .team-col h3 {
+            color: #fff !important;
+        }
+        body.active .about-banner p, 
+        body.active .about-desc {
+            color: #ccc !important;
+        }
+        body.active .team-col {
+            background: #333 !important;
+            box-shadow: 0 5px 20px rgba(255,255,255,0.02);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="about-header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" width="125px" />
+                    </a>
+                </div>
+                <div class="search_bar">
+                    <input type="text" name="search" placeholder="Search for products, brands and more">
+                    <button type="submit" class="search-button"><img src="icons8-search-24.png"></button>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="allproducts.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                    <img src="cart.png" width="30px" height="30px" />
+                </a>
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-solid fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+                <img src="menu.png" class="menu-icon" onclick="menutoggle()" />
+            </div>
+
+            <div class="about-banner" data-aos="fade-up">
+                <h1>About Our Brand</h1>
+                <p><a href="index.html" style="color: #ff523b;">Home</a> / About Us</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="small-container">
+        
+        <div class="about-core" data-aos="fade-up">
+            <div class="about-row">
+                <div class="about-col-img">
+                    <img src="gallery-1.jpg" class="about-img" />
+                </div>
+                <div class="about-col-text">
+                    <p class="tagline">Our Premium Concept</p>
+                    <h2 class="about-heading">We Provide Best Quality Sports Outfits</h2>
+                    <p class="about-desc">
+                        Founded with a vision to revolutionize fitness clothing, RedStore brings together high-end design structures and outstanding durability. Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many.
+                    </p>
+                    <p class="about-desc">
+                        We design custom products that fit perfectly and support dynamic user agility. From premium runners to breathable shirts, each item represents the peak of retail layout quality.
+                    </p>
+                    <a href="allproducts.html" class="btn">View Collections &#8594;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="milestones" data-aos="fade-up">
+            <div class="milestone-row">
+                <div class="milestone-box">
+                    <h2>12K+</h2>
+                    <p>Happy Global Viewers</p>
+                </div>
+                <div class="milestone-box">
+                    <h2>50+</h2>
+                    <p>Premium Products</p>
+                </div>
+                <div class="milestone-box">
+                    <h2>24/7</h2>
+                    <p>Operational Support</p>
+                </div>
+                <div class="milestone-box">
+                    <h2>100%</h2>
+                    <p>Authentic Quality</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-section" data-aos="fade-up">
+            <h2 class="team-title">Our Creative Mind</h2>
+            <div class="team-row">
+                <div class="team-col">
+                    <img src="user-1.png" />
+                    <h3>Emma Watson</h3>
+                    <p>Lead Apparel Designer</p>
+                </div>
+                <div class="team-col">
+                    <img src="user-2.png" />
+                    <h3>M. Mujeeb Ur Rehman</h3>
+                    <p>Founder & Web Architect</p>
+                </div>
+                <div class="team-col">
+                    <img src="user-3.png" />
+                    <h3>John Doe</h3>
+                    <p>Marketing Operations</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="play-store.png" />
+                        <img src="app-store.png" />
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="logo-white.png" />
+                    <p>Our Purpose is to Sustainably make the Pleasure and Benefits of Sports Accessible to the many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <p class="copyright">
+                Copyright &copy;
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+                - RedStore
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        // Dark Mode Controller System
+        const ball = document.querySelector(".toggle-ball");
+        const items = document.querySelectorAll(".row,body,.menu-icon,.container,.navbar,.about-header,.toggle");
+        
+        ball.addEventListener("click", () => {
+            items.forEach(item => {
+                item.classList.toggle("active");
+            });
+            ball.classList.toggle("active");
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
