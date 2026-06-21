@@ -274,6 +274,7 @@ p {
     transition: all 350ms ease;
     position: relative;
     overflow: hidden;
+    margin-left: 0px;
 }
 
 .btn::after {
@@ -727,6 +728,11 @@ ul {
     .search_bar input {
         width: 90%;
     }
+    [data-aos^="fade"][data-aos^="fade"].aos-animate {
+  opacity: 1;
+  transform: translateZ(0);
+  text-align: left;
+}
 
     nav ul {
         background: rgba(94, 30, 180, 0.95);
@@ -764,6 +770,7 @@ ul {
         display: inline-flex;
         justify-content: center;
         margin-top: 90px;
+        margin-left: -5px;
     }
 
     .search_bar input {
@@ -774,10 +781,23 @@ ul {
         text-align: center;
     }
 
-    .col-2,
-    .col-3,
+    .col-2  p h1{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    [data-aos^="fade"][data-aos^="fade"].aos-animate {
+  opacity: 1;
+  transform: translateZ(0);
+  text-align: center;
+  text-align: left;
+}
+    .col-3 {
+        flex-basis: 100%;
+        text-align: left;
+    }
     .col-4 {
         flex-basis: 100%;
+        text-align: left;
     }
 
     .col-2 p {
